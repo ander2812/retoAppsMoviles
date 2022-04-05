@@ -10,12 +10,14 @@ class MainActivity2 : AppCompatActivity() {
 
     private lateinit var navigator:BottomNavigationView
     private lateinit var barViewFragment: BarViewFragment
+    private lateinit var userFragment: UserFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
         barViewFragment = BarViewFragment.newInstance()
+        userFragment = UserFragment.newInstance()
 
         navigator = findViewById(R.id.navigator)
 
@@ -34,6 +36,7 @@ class MainActivity2 : AppCompatActivity() {
 
 
             }else if(menuItem.itemId == R.id.profileitem){
+                showFragment(userFragment)
 
             }
 
