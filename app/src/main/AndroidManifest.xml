@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <activity
+            android:name=".SelectImage"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
@@ -38,14 +41,14 @@
         </activity>
 
         <provider
-            android:authorities="com.example.app"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.app"
             android:exported="false"
             android:grantUriPermissions="true">
-
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/paths"/>
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
         </provider>
-
     </application>
 
 </manifest>

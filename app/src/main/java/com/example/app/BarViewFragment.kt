@@ -1,5 +1,6 @@
 package com.example.app
 
+import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -20,15 +21,15 @@ import kotlinx.android.synthetic.main.fragment_bar_view.*
 
 class BarViewFragment : Fragment() {
 
-    private lateinit var insImage: ImageView
+    private lateinit var addimage: ImageView
     private lateinit var heImage: ImageView
     private lateinit var msImage: ImageView
     private lateinit var contactsRecycler: RecyclerView
     private lateinit var addButton: Button
+    private lateinit var intent: Intent
 
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var adapter: UsersAdapter;
-    private lateinit var binding: FragmentBarViewBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,13 +37,11 @@ class BarViewFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_bar_view, container, false)
-        val galeryLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(), ::onGaleryResult)
 
-        insImage = view.findViewById(R.id.insImage)
+        addimage = view.findViewById(R.id.addimage)
         heImage = view.findViewById(R.id.heImage)
         msImage = view.findViewById(R.id.msImage)
         contactsRecycler = view.findViewById(R.id.contactsRecycler)
-        addButton =view.findViewById(R.id.addButton)
 
         layoutManager = LinearLayoutManager(context)
         contactsRecycler.layoutManager = layoutManager
@@ -51,21 +50,16 @@ class BarViewFragment : Fragment() {
         adapter = UsersAdapter()
         contactsRecycler.adapter = adapter
 
-        addButton.setOnClickListener {
-            print("entro aqui")
-            val intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.type = "image/*"
+        addimage.setOnClickListener {
 
-            galeryLauncher.launch(intent)
+
 
         }
 
 
+
+
         return view
-    }
-
-    fun onGaleryResult(result: ActivityResult?){
-
     }
 
     companion object {

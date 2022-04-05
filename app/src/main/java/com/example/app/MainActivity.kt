@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         users.add(User("ander2812", "123456789"))
+        users.add(User("beta@gmail.com", "aplicacionesmoviles"))
+        users.add(User("alfa@gmail.com", "aplicacionesmoviles"))
 
         loginButton.setOnClickListener {
 

@@ -9,6 +9,10 @@
     android:layout_height="match_parent"
     tools:context=".BarViewFragment">
 
+
+
+
+
     ]]>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -18,10 +22,10 @@
         android:layout_marginTop="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/insImage"
@@ -69,18 +73,6 @@
         app:layout_constraintStart_toEndOf="@+id/heImage"
         app:layout_constraintTop_toTopOf="@+id/insImage"
         app:srcCompat="@drawable/ic_message_svgrepo_com" />
-
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="56dp"
-        android:text="Button"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/insImage"
-        app:layout_constraintEnd_toEndOf="@+id/heImage"
-        app:layout_constraintTop_toTopOf="@+id/insImage"
-        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/heartButton"
