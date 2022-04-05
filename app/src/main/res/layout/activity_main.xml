@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageInstagram"
+        android:layout_width="339dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_instagram_wordmark" />
+
+    <EditText
+        android:id="@+id/userText"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="usuario"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/imageInstagram"
+        app:layout_constraintStart_toStartOf="@+id/imageInstagram"
+        app:layout_constraintTop_toBottomOf="@+id/imageInstagram" />
+
+    <EditText
+        android:id="@+id/passwordTest"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="contraseña"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintEnd_toEndOf="@+id/userText"
+        app:layout_constraintStart_toStartOf="@+id/userText"
+        app:layout_constraintTop_toBottomOf="@+id/userText" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="80dp"
+        android:text="Iniciar sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTest"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordTest"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTest"
+        app:layout_constraintVertical_bias="0.126" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
