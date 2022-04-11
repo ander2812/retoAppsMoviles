@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener {
 
+            val intent = Intent(this, PublicationActivity::class.java)
+
+            intent.putExtra("username", userText.text.toString())
+
+            startActivity(intent)
+
             val user = User(userText.text.toString(),passwordTest.text.toString())
 
             var temp = false

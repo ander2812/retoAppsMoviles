@@ -2,5 +2,5 @@
 <paths>
     <external-path
         name="/storage/emulated/0"
-        path="/Android/data/com.example.app/files/photo.png"/>
+        path="/Android/data/com.example.app/files"/>
 </paths>

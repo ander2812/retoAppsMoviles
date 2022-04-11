@@ -11,6 +11,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var navigator:BottomNavigationView
     private lateinit var barViewFragment: BarViewFragment
     private lateinit var userFragment: UserFragment
+    private lateinit var searchFragment: SearchFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class MainActivity2 : AppCompatActivity() {
 
         barViewFragment = BarViewFragment.newInstance()
         userFragment = UserFragment.newInstance()
+        searchFragment = SearchFragment.newInstance()
 
         navigator = findViewById(R.id.navigator)
 
@@ -27,6 +29,7 @@ class MainActivity2 : AppCompatActivity() {
                 showFragment(barViewFragment)
 
             }else if(menuItem.itemId == R.id.searchitem){
+                showFragment(searchFragment)
 
 
             }else if(menuItem.itemId == R.id.videoitem){

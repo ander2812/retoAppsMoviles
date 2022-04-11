@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 
 class UploadImage : AppCompatActivity() {
-
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +19,8 @@ class UploadImage : AppCompatActivity() {
         requestPermissions(arrayOf(
             Manifest.permission.CAMERA,
             Manifest.permission.CALL_PHONE,
-            Manifest.permission.READ_EXTERNAL_STORAGE
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
         ), 1 )
     }
 

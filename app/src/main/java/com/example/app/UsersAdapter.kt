@@ -9,14 +9,9 @@ class UsersAdapter : RecyclerView.Adapter<HomeView>() {
 
     private val publications = ArrayList<Home>()
 
-    init {
-        publications.add(Home(6, "ander2812", "asdfgh"))
-        publications.add(Home(6, "ander2812", "asdfgh"))
-        publications.add(Home(6, "ander2812", "asdfgh"))
-    }
-
     fun addPublication(home: Home){
         publications.add(home)
+        print(publications)
         notifyItemInserted(publications.size-1)
     }
 
@@ -33,7 +28,7 @@ class UsersAdapter : RecyclerView.Adapter<HomeView>() {
         
         val publication = publications[position]
         skeleton.textLike.text = publication.likes.toString()
-        skeleton.textUser.text = publication.username.toString()
+        skeleton.textUser.text = publication.username
         skeleton.textDescription.text = publication.description
         skeleton.likeText.text
 

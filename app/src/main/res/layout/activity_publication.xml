@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PublicationActivity">
+
+    <ImageView
+        android:id="@+id/publicationImage"
+        android:layout_width="190dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="111dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="275dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="320dp"
+        android:ems="10"
+        android:hint="Escribe un pie de foto o video..."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadImage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/checkImage2"
+        android:layout_width="71dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintStart_toEndOf="@+id/publicationText2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+
+    <ImageView
+        android:id="@+id/backArrowImage"
+        android:layout_width="71dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkImage2"
+        app:layout_constraintEnd_toStartOf="@+id/publicationText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkImage2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:id="@+id/publicationText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="42dp"
+        android:text="Nueva publicacion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/uploadImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backArrowImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

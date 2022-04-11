@@ -13,16 +13,16 @@
         android:layout_marginTop="111dp"
         android:layout_marginEnd="130dp"
         android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_account_circle_black_24dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/exitButton"
         android:layout_width="187dp"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginStart="103dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="121dp"
@@ -32,4 +32,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/cameraImage"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/baseline_add_a_photo_black_24dp" />
+
+    <ImageView
+        android:id="@+id/searchImage2"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cameraImage"
+        app:srcCompat="@drawable/baseline_search_black_24dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

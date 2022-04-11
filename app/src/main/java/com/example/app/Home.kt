@@ -7,12 +7,14 @@ class Home {
     var username: String
     var likes: Int
     var description: String
-    //var image: ImageView
+    var id: String
+    var image: ImageView
 
-    constructor(likes: Int, username: String, description: String){
+    constructor(id: String, likes: Int, username: String, image: ImageView, description: String){
         this.likes = likes
         this.username = username
         this.description = description
-        //this.image = image
+        this.id = id
+        this.image = image
     }
 }

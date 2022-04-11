@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app.databinding.ActivityHomeBinding
 import com.example.app.databinding.FragmentBarViewBinding
+import kotlinx.android.synthetic.main.activity_publication.*
 import kotlinx.android.synthetic.main.contactrow.*
 import kotlinx.android.synthetic.main.fragment_bar_view.*
+import java.util.*
 
 class BarViewFragment : Fragment() {
 
@@ -29,7 +31,8 @@ class BarViewFragment : Fragment() {
     private lateinit var intent: Intent
 
     private lateinit var layoutManager: LinearLayoutManager
-    private lateinit var adapter: UsersAdapter;
+    var adapter: UsersAdapter = UsersAdapter()
+    private lateinit var user: User
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,11 +50,12 @@ class BarViewFragment : Fragment() {
         contactsRecycler.layoutManager = layoutManager
         contactsRecycler.setHasFixedSize(true)
 
-        adapter = UsersAdapter()
         contactsRecycler.adapter = adapter
 
         addimage.setOnClickListener {
 
+            val intent = Intent(this.activity, UploadImage::class.java)
+            startActivity(intent)
 
 
         }
@@ -59,8 +63,21 @@ class BarViewFragment : Fragment() {
 
 
 
+
         return view
     }
+
+    fun registerPublication(publication: Home){
+
+        adapter.addPublication(publication)
+
+
+
+    }
+
+
+
+
 
     companion object {
         @JvmStatic

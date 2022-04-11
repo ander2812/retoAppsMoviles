@@ -26,6 +26,7 @@
         android:ems="10"
         android:hint="usuario"
         android:inputType="textPersonName"
+        android:text="ander2812"
         app:layout_constraintEnd_toEndOf="@+id/imageInstagram"
         app:layout_constraintStart_toStartOf="@+id/imageInstagram"
         app:layout_constraintTop_toBottomOf="@+id/imageInstagram" />
@@ -37,7 +38,8 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="contraseña"
-        android:inputType="textVisiblePassword"
+        android:inputType="textPassword"
+        android:text="123456789"
         app:layout_constraintEnd_toEndOf="@+id/userText"
         app:layout_constraintStart_toStartOf="@+id/userText"
         app:layout_constraintTop_toBottomOf="@+id/userText" />
